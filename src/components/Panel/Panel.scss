@@ -1,0 +1,10 @@
+@import '../../styles/colors';
+
+.panel {
+  color: $panel-color;
+  padding: 0.5rem;
+  background-color: $panel-bg-color;
+  border-radius: .25rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}

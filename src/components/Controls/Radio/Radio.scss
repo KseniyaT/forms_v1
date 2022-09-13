@@ -1,0 +1,24 @@
+@import '../../../styles/colors';
+@import '../Checkbox/Checkbox';
+
+.label {
+  @extend .label;
+}
+
+.checkbox {
+  @extend .checkbox;
+}
+
+.checkmark {
+  @extend .checkmark;
+  border-radius: 50%;
+
+  &:after {
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+}

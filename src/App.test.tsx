@@ -1,9 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  it('should render component', () => {
+    render(<App />);
+    expect(screen.getByText('Config')).toBeInTheDocument();
+    expect(screen.getByText('Result')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Add Json here')).toBeInTheDocument();
+    expect(screen.getByText('Add json to see a result here')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Add Json here').closest('div')).toBeVisible();
+    expect(screen.getByText('Add json to see a result here').closest('div')).not.toBeVisible();
+  });
 });

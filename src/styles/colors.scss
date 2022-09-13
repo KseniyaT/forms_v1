@@ -1,0 +1,42 @@
+$primary-color: #6B7280;
+$secondary-color: #48E1A1;
+$third-color: #50A0DD;
+
+$border-color: #D1D5DB;
+$btn-color: #04AA6D;
+$panel-bg-color: #E5E7EB;
+$panel-color: #374151;
+
+$white-color: #FFF;
+$danger-color: #FF8352;
+
+$lighten: 5;
+$darken: 15;
+
+$colors: (
+    primary: (
+        base: $primary-color,
+        light: lighten($primary-color, $lighten),
+        dark: darken($primary-color, $darken),
+    ),
+    secondary: (
+        base: $secondary-color,
+        light: lighten($secondary-color, $lighten),
+        dark: darken($secondary-color, $darken),
+    ),
+    border: (
+        base: $border-color,
+        light: lighten($border-color, $lighten),
+        dark: darken($border-color, $darken),
+    ),
+    danger: (
+        base: $danger-color,
+        light: lighten($danger-color, $lighten),
+        dark: darken($danger-color, $darken),
+    ),
+);
+
+@function clr($base, $shade: base) {
+    $color: map-get(map-get($colors, $base), $shade);
+    @return $color;
+}

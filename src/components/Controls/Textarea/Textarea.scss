@@ -1,0 +1,13 @@
+@import '../Inputs/Inputs';
+
+.textarea {
+  @extend .input;
+  overflow: auto;
+  resize: vertical;
+  min-height: 3.5rem;
+
+  &.incorrect {
+    border-color: $danger-color;
+    box-shadow: 0 0 0.2rem rgba($danger-color, 0.25);
+  }
+}
